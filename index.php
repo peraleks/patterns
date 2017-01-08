@@ -13,7 +13,7 @@ define('WEB_DIR', __DIR__);
 // Фабричный метод .............. Factory Method
 // Абстрактная фабрика .......... Abstract Factory
 // Статическая фабрика / Static Factory
-//              include(__DIR__.'/Creational/factory/factory.php');
+              include(__DIR__.'/Creational/factoryMethod/factoryMethod.php');
 //.............................................................................
 // Одиночка ..................... Singleton
 // Прототип ..................... Prototype
@@ -46,7 +46,7 @@ define('WEB_DIR', __DIR__);
 
 // Адаптер ...................... Adapter / Wrapper
 // Декоратор / Decorator ( Wrapper / Обёртка)
-              include(__DIR__.'/Structural/decorator/decorator.php');
+//              include(__DIR__.'/Structural/decorator/decorator.php');
 //.............................................................................
 // Заместитель .................. Proxy
 // Компоновщик .................. Composite
