@@ -1,133 +1,77 @@
 <?php
-// Шаблон ДЕКОРАТОР
-declare(strict_types=1);
+/**
+ * ДЕКОРАТОР предназначенный для динамического подключения дополнительного поведения к объекту.
+ * Предоставляет гибкую альтернативу практике создания подклассов с целью расширения функциональности.
+ *
+ * Задача
+ * Объект, который предполагается использовать, выполняет основные функции.
+ * Однако может потребоваться добавить к нему некоторую дополнительную функциональность,
+ * которая будет выполняться до, после или даже вместо основной функциональности объекта.
+ *
+ * Реализация
+ * Создается абстрактный класс, представляющий как исходный класс, так и новые, добавляемые в класс функции.
+ * В классах-декораторах новые функции вызываются в требуемой последовательности
+ * — до или после вызова последующего объекта.
+ * При желании остаётся возможность использовать исходный класс (без расширения функциональности),
+ * если на его объект сохранилась ссылка.
+ */
 
-abstract class Beverage
+abstract class Component
 {
-    /**
-     * @var string описание напитка
-     */
-    protected $description;
-
-    protected $size;
-
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-
-    public function getSize()
-    {
-        return $this->size;
-    }
-
-    public function setSize(int $size)
-    {
-        $this->size = $size;
-    }
-
-    public abstract function cost(): float;
+    abstract function operation(): string;
 }
 
-abstract class CondimentDecorator extends Beverage
+class ConcreteComponent extends Component
 {
-
-}
-
-class Coffee extends Beverage
-{
-    function __construct()
+    public function operation(): string
     {
-        $this->description = 'Лучший кофе ';
-    }
-
-    public function cost(): float
-    {
-       return 0.33 * $this->size;
+        return 'word';
     }
 }
 
-class Tea extends Beverage
+abstract class Decorator extends Component
 {
-    function __construct()
-    {
-        $this->description = 'Чёрный чай ';
-    }
+    protected $component;
 
-    public function cost(): float
+    function __construct(Component $component)
     {
-        return 0.22 * $this->size;
+        $this->component = $component;
     }
 }
 
-class Milk extends CondimentDecorator
+class ConcreteDecoratorColor extends Decorator
 {
-    public $beverage;
-
-    function __construct(Beverage $beverage)
+    public function operation(): string
     {
-        $this->beverage = $beverage;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->beverage->getDescription().' + Молоко';
-    }
-
-    public function cost(): float
-    {
-        return 0.5 * $this->getSize() + $this->beverage->cost();
-    }
-
-    public function setSize(int $size)
-    {
-        $this->beverage->setSize($size);
-    }
-
-    public function getSize()
-    {
-        return $this->beverage->getSize();
-    }
-
-}
-
-class Sugar extends CondimentDecorator
-{
-    public $beverage;
-
-    function __construct(Beverage $beverage)
-    {
-        $this->beverage = $beverage;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->beverage->getDescription().' + Сахар';
-    }
-
-    public function cost(): float
-    {
-        return 0.3 * $this->getSize() + $this->beverage->cost();
-    }
-
-    public function setSize(int $size)
-    {
-        $this->beverage->setSize($size);
-    }
-
-    public function getSize()
-    {
-        return $this->beverage->getSize();
+        return '<span style="color:red">'.$this->component->operation().'</span>';
     }
 }
 
-$coffee = new Coffee();
-$coffee->setSize(1);
-echo $coffee->getDescription().' '.$coffee->cost().'<br>';
+class ConcreteDecoratorBorder extends Decorator
+{
+    protected $color = "blue";
 
-$tea = new Tea();
-$tea->setSize(1);
-$tea = new Milk($tea);
-$tea = new Milk($tea);
-$tea = new Sugar($tea);
-echo $tea->getDescription().' '.$tea->cost().'<br>';
+    public function operation(): string
+    {
+        return "<div style=\"border: 4px solid $this->color; display: inline-block\">"
+            .$this->component->operation().
+            '</div>';
+    }
+
+    public function setColor(string $color)
+    {
+        $this->color = $color;
+    }
+}
+
+$component = new ConcreteComponent();
+echo $component->operation().'<br>';
+$component= new ConcreteDecoratorColor($component);
+echo $component->operation().'<br>';
+$component = new ConcreteDecoratorBorder($component);
+echo $component->operation().'<br>';
+($component = new ConcreteDecoratorBorder($component))->setColor('red');
+echo $component->operation().'<br>';
+$component = new ConcreteDecoratorBorder($component);
+$component->setColor('yellow');
+echo $component->operation().'<br>';

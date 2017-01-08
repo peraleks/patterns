@@ -45,8 +45,8 @@ define('WEB_DIR', __DIR__);
 // ***************** СТРУКТУРНЫЕ **********************************************
 
 // Адаптер ...................... Adapter / Wrapper
-// Декоратор / Decorator
-//              include(__DIR__.'/Structural/decorator/decorator.php');
+// Декоратор / Decorator ( Wrapper / Обёртка)
+              include(__DIR__.'/Structural/decorator/decorator.php');
 //.............................................................................
 // Заместитель .................. Proxy
 // Компоновщик .................. Composite
