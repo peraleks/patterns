@@ -2,120 +2,88 @@
 
 /**
  * ФАБРИЧНЫЙ МЕТОД определяет интерфейс для создания объекта, но оставляет подклассам
- * возможность решать, какой класс инстанцировать. Фабричный метод позволяет классу
- * делегировать инстанцирование подклассам.
+ * возможность решать, какой класс инстанцировать.
  *
- * Применимость.
- * Используйте паттерн когда
- * - классу заранее неизвестно, объекты каких классов ему нужно создавать;
- * - класс спроэктирован так, чтобы объекты, которые он создаёт, специфицировались подклассами;
- * - класс делегирует свои обязанности одному из нескольких вспомогательных подклассов,
- *   и вы планируете локализовать знание о том, какой класс принимает эти обязанности на себя.
+ * Для чего нужен?
+ * - чтобы вынести из класса инстанцирование объектов, которые используются этим классом
+ * - скрыть от клиентского кода конкретные реализации инстанцируемых объектов, и вместе
+ *   с этим предоставить возможность выбора обьект какщй реализации инстанцировать.
  */
 
 abstract class Product
 {
-    abstract function display();
+    protected $tagOpen = "<div style='border: 2px solid black;
+                        background-color: grey;
+                        display: inline-block;";
+
+    protected $tagClose = "</div>";
+
+    protected $style = '';
+
+    protected $number;
+
+    function __construct(int $i)
+    {
+        $this->number = $i;
+    }
+
+    public function display()
+    {
+        echo $this->tagOpen.$this->style."'>".$this->number.$this->tagClose;
+    }
 }
 
 abstract class Creator
 {
-    abstract function factoryMethod(string $type);
+    abstract function factoryMethod(int $i): Product;
+
+    public function createComposition()
+    {
+        echo '<div style="border: 1px solid red; padding: 10px; display: inline-block;">';
+        for ($i = 1; $i < 6; ++$i) {
+            echo $this->factoryMethod($i)->display();
+        }
+        echo '</div>';
+    }
 }
 
 class ConcreteCreatorRectangle extends Creator
 {
-    function factoryMethod(string $type): Product
+    public function factoryMethod(int $number): Product
     {
-        switch ($type) {
-            case 'shaded':
-                return new ConcreteProductShadedRectangle();
-                break;
-            case 'contour':
-                return new ConcreteProductContourRectangle();
-                break;
-        }
+        return new ConcreteProductRectangle($number);
     }
 }
 
 class ConcreteCreatorCircle extends Creator
 {
-    function factoryMethod(string $type): Product
+    public function factoryMethod(int $number): Product
     {
-        switch ($type) {
-            case 'shaded':
-                return new ConcreteProductShadedCircle();
-                break;
-            case 'contour':
-                return new ConcreteProductContourCircle();
-                break;
-        }
+        return new ConcreteProductCircle($number);
     }
 }
 
-class ConcreteProductShadedRectangle extends Product
+class ConcreteProductRectangle extends Product
 {
-    public function display()
-    {
-        echo "<div style='
-                border: 2px solid black;
-                padding: 20px 30px;
-                background-color: #9b9b9b;
-                display: inline-block;
-                '></div>";
-    }
+    protected $style = 'padding: 20px 30px;';
 }
 
-class ConcreteProductContourRectangle extends Product
+class ConcreteProductCircle extends Product
 {
-    public function display()
-    {
-        echo "<div style='
-                border: 2px solid;
-                padding: 20px 30px;
-                display: inline-block;
-                '></div>";
-    }
+    protected $style = 'padding: 20px 30px; border-radius: 50%;';
 }
 
-class ConcreteProductShadedCircle extends Product
+/**
+ * Класс не имеет прямого отношения к паттерну, а лишь демонстрирует использование интерфейса Creator.
+ */
+class CompositionBuilder
 {
-    public function display()
+    static function build(Creator $creator)
     {
-        echo "<div style='
-                border: 2px solid;
-                padding: 20px 20px;
-                border-radius: 50%;
-                background-color: #9b9b9b;
-                display: inline-block;
-                '></div>";
+        $creator->createComposition();
     }
 }
 
-class ConcreteProductContourCircle extends Product
-{
-    public function display()
-    {
-        echo "<div style='
-                border: 2px solid;
-                padding: 20px 20px;
-                border-radius: 50%;
-                display: inline-block;
-                '></div>";
-    }
-}
-
-$figure = [];
-$rectangle = new ConcreteCreatorRectangle();
-$circle = new ConcreteCreatorCircle();
-
-$figure[] = $rectangle->factoryMethod('shaded');
-$figure[] = $circle->factoryMethod('contour');
-$figure[] = $circle->factoryMethod('shaded');
-$figure[] = $rectangle->factoryMethod('contour');
-$figure[] = $circle->factoryMethod('shaded');
-$figure[] = $circle->factoryMethod('contour');
-
-foreach ($figure as $figureValue) {
-    $figureValue->display();
-}
+CompositionBuilder::build(new ConcreteCreatorRectangle);
+echo '<br>';
+CompositionBuilder::build(new ConcreteCreatorCircle);
