@@ -10,10 +10,11 @@ define('WEB_DIR', __DIR__);
 // **************** ПОРОЖДАЮЩИЕ ***********************************************
 
 // Простая фабрика .............. Simple Factory
-// Фабричный метод .............. Factory Method
-// Абстрактная фабрика .......... Abstract Factory
+// Фабричный метод / Factory Method
+//                include(__DIR__.'/Creational/factoryMethod/factoryMethod.php');
+// Абстрактная фабрика / Abstract Factory (Kit / Инструментарий)
+                include(__DIR__.'/Creational/abstractFactory/abstractFactory.php');
 // Статическая фабрика / Static Factory
-              include(__DIR__.'/Creational/factoryMethod/factoryMethod.php');
 //.............................................................................
 // Одиночка ..................... Singleton
 // Прототип ..................... Prototype

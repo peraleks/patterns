@@ -22,7 +22,7 @@ bg=yellow</panel_attributes>
       <w>320</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>*Factory Method / Virtual Concructor*
+    <panel_attributes>*Factory Method / Virtual Constructor*
 style=wordwrap
 fg=light_gray
 fontsize=18

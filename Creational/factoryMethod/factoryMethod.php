@@ -7,7 +7,7 @@
  * Для чего нужен?
  * - чтобы вынести из класса инстанцирование объектов, которые используются этим классом
  * - скрыть от клиентского кода конкретные реализации инстанцируемых объектов, и вместе
- *   с этим предоставить возможность выбора обьект какщй реализации инстанцировать.
+ *   с этим предоставить возможность выбора обьект какой реализации инстанцировать.
  */
 
 abstract class Product
@@ -47,43 +47,34 @@ abstract class Creator
     }
 }
 
-class ConcreteCreatorRectangle extends Creator
+class RectangleConcreteCreator extends Creator
 {
     public function factoryMethod(int $number): Product
     {
-        return new ConcreteProductRectangle($number);
+        return new RectangleConcreteProduct($number);
     }
 }
 
-class ConcreteCreatorCircle extends Creator
+class CircleConcreteCreator extends Creator
 {
     public function factoryMethod(int $number): Product
     {
-        return new ConcreteProductCircle($number);
+        return new CircleConcreteProduct($number);
     }
 }
 
-class ConcreteProductRectangle extends Product
+class RectangleConcreteProduct extends Product
 {
     protected $style = 'padding: 20px 30px;';
 }
 
-class ConcreteProductCircle extends Product
+class CircleConcreteProduct extends Product
 {
-    protected $style = 'padding: 20px 30px; border-radius: 50%;';
+    protected $style = 'padding: 20px 20px; border-radius: 50%;';
 }
 
-/**
- * Класс не имеет прямого отношения к паттерну, а лишь демонстрирует использование интерфейса Creator.
- */
-class CompositionBuilder
-{
-    static function build(Creator $creator)
-    {
-        $creator->createComposition();
-    }
-}
 
-CompositionBuilder::build(new ConcreteCreatorRectangle);
+
+(new RectangleConcreteCreator)->createComposition();
 echo '<br>';
-CompositionBuilder::build(new ConcreteCreatorCircle);
+(new CircleConcreteCreator)->factoryMethod(11)->display();
