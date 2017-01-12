@@ -9,8 +9,8 @@
       <w>168</w>
       <h>96</h>
     </coordinates>
-    <panel_attributes>"interface"
-/AbstractFactory/
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*/AbstractFactory/*
 --
 /+ createProductA()/
 /+ createProductB()/
@@ -57,7 +57,7 @@ bg=green</panel_attributes>
       <w>168</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>/AbstractProductA/
+    <panel_attributes>*/AbstractProductA/*
 --
 --
 fg=blue</panel_attributes>
@@ -71,7 +71,7 @@ fg=blue</panel_attributes>
       <w>168</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>/AbstractProductB/
+    <panel_attributes>*/AbstractProductB/*
 --
 --
 fg=magenta</panel_attributes>
@@ -185,7 +185,7 @@ fg=gray</panel_attributes>
       <w>96</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;.
+    <panel_attributes>lt=&lt;&lt;-
 fg=magenta</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0;60.0;30.0;60.0;50.0</additional_attributes>
   </element>
@@ -197,7 +197,7 @@ fg=magenta</panel_attributes>
       <w>108</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;.
+    <panel_attributes>lt=&lt;&lt;-
 fg=magenta</panel_attributes>
     <additional_attributes>70.0;10.0;70.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
   </element>
@@ -209,7 +209,7 @@ fg=magenta</panel_attributes>
       <w>96</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;.
+    <panel_attributes>lt=&lt;&lt;-
 fg=blue</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0;60.0;30.0;60.0;50.0</additional_attributes>
   </element>
@@ -221,7 +221,7 @@ fg=blue</panel_attributes>
       <w>96</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;.
+    <panel_attributes>lt=&lt;&lt;-
 fg=blue</panel_attributes>
     <additional_attributes>60.0;10.0;60.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
   </element>

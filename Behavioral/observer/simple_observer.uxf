@@ -28,11 +28,11 @@ bg=green</panel_attributes>
       <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
-*Subject*
+/*Subject*/
 --
-+ addObserver (o:Observer)
-+ removeObserver (o:Observer)
-+ notifyObserver ()
+/+ addObserver (o:Observer)/
+/+ removeObserver (o:Observer)/
+/+ notifyObserver ()/
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -58,11 +58,10 @@ bg=yellow</panel_attributes>
       <x>384</x>
       <y>300</y>
       <w>180</w>
-      <h>96</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>*ConcreteObserver*
 --
-
 --
 + handleEvent ()
 
