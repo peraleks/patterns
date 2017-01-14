@@ -19,7 +19,7 @@ define('WEB_DIR', __DIR__);
 // Статическая фабрика / Static Factory
 //.............................................................................
 // Одиночка / Singleton
-                include(__DIR__.'/Creational/singleton/singleton.php');
+//                include(__DIR__.'/Creational/singleton/singleton.php');
 // Прототип ..................... Prototype
 // Строитель .................... Builder
 // Пул одиночек ................. Multiton
@@ -36,7 +36,8 @@ define('WEB_DIR', __DIR__);
 //.............................................................................
 // Интерпретатор / Interpreter
 // Итератор ..................... Iterator
-// Команда ...................... Command
+// Команда / Command (Action / Действие, Transaction / Транзакция)
+                include(__DIR__.'/Behavioral/command/command.php');
 // Посетитель ................... Visitor
 // Посредник .................... Mediator
 // Состояние .................... State

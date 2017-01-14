@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>70</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*/Command/*
+--
+/+ execute()/
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>180</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*ConcreteCommand*
+--
+- reciver: Reciver
+--
++ setReciver(: Reciver)
++ execute()
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>160</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Invoker*
+--
+- commands: array
+--
++ invoke()
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>180</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+fg=green</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>70</y>
+      <w>230</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+fg=green</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0;210.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>130</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>180</y>
+      <w>90</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Reciver*
+--
+--
++ action()
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>200</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=orange</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>110</x>
+      <y>110</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>reciver -&gt; action()
+bg=#adadff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>130</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0;70.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>320</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>*Client*
+
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>260</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>220</y>
+      <w>240</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=red</panel_attributes>
+    <additional_attributes>220.0;10.0;220.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instantiate&gt;&gt;
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;200.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>380</x>
+      <y>280</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>commands[ i ] -&gt; execute()
+bg=#adadff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>200</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>200</x>
+      <y>30</y>
+      <w>290</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>*Command / Action / Transaction*
+style=wordwrap
+fg=light_gray
+fontsize=18
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
