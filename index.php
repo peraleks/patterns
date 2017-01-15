@@ -50,7 +50,7 @@ define('WEB_DIR', __DIR__);
 // ***************** СТРУКТУРНЫЕ **********************************************
 
 // Адаптер / Adapter ( Wrapper / Обёртка)
-              include(__DIR__.'/Structural/adapter/adapter.php');
+//              include(__DIR__.'/Structural/adapter/adapter.php');
 //.............................................................................
 // Декоратор / Decorator ( Wrapper / Обёртка)
 //              include(__DIR__.'/Structural/decorator/decorator.php');
@@ -59,7 +59,8 @@ define('WEB_DIR', __DIR__);
 // Компоновщик .................. Composite
 // Мост ......................... Bridge
 // Приспособленец ............... Flyewight
-// Фасад ........................ Facade
+// Фасад / Facade
+            include(__DIR__.'/Structural/facade/facade.php');
 // Преобразователь данных ....... Data Mapper
 // Внедрение зависимости ........ Dependency Injection
 // Текучий интерфейс ............ Fluent Interface
