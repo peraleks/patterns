@@ -37,7 +37,7 @@ define('WEB_DIR', __DIR__);
 // Интерпретатор / Interpreter
 // Итератор ..................... Iterator
 // Команда / Command (Action / Действие, Transaction / Транзакция)
-                include(__DIR__.'/Behavioral/command/command.php');
+//                include(__DIR__.'/Behavioral/command/command.php');
 // Посетитель ................... Visitor
 // Посредник .................... Mediator
 // Состояние .................... State
@@ -49,7 +49,9 @@ define('WEB_DIR', __DIR__);
 //
 // ***************** СТРУКТУРНЫЕ **********************************************
 
-// Адаптер ...................... Adapter / Wrapper
+// Адаптер / Adapter ( Wrapper / Обёртка)
+              include(__DIR__.'/Structural/adapter/adapter.php');
+//.............................................................................
 // Декоратор / Decorator ( Wrapper / Обёртка)
 //              include(__DIR__.'/Structural/decorator/decorator.php');
 //.............................................................................
