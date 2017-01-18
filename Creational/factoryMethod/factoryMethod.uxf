@@ -59,7 +59,7 @@ bg=yellow</panel_attributes>
 --
 --
 anotherMethod()
-factoryMethod()
+/factoryMethod()/
 
 bg=pink</panel_attributes>
     <additional_attributes/>
@@ -75,8 +75,8 @@ bg=pink</panel_attributes>
     <panel_attributes>*Creator*
 --
 --
- anotherMethod()
-^factoryMethod():Product
+^anotherMethod()
+factoryMethod():Product
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>

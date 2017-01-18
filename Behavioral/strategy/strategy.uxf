@@ -28,7 +28,7 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>99</x>
+      <x>88</x>
       <y>198</y>
       <w>132</w>
       <h>66</h>
@@ -44,12 +44,27 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>572</x>
+      <x>561</x>
       <y>209</y>
       <w>121</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>/*Strategy*/
+--
+--
+/+algorithm()/
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>275</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>*Strategy2*
 --
 --
 +algorithm()
@@ -59,22 +74,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>275</y>
-      <w>132</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>*Strategy2*
---
---
-^+algorithm()
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>396</x>
+      <x>385</x>
       <y>143</y>
       <w>132</w>
       <h>55</h>
@@ -82,14 +82,14 @@ bg=yellow</panel_attributes>
     <panel_attributes>*Strategy1*
 --
 --
-^+algorithm()
++algorithm()
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>517</x>
+      <x>506</x>
       <y>154</y>
       <w>77</w>
       <h>99</h>
@@ -100,7 +100,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>99</x>
+      <x>88</x>
       <y>242</y>
       <w>33</w>
       <h>66</h>
@@ -111,7 +111,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>99</x>
+      <x>88</x>
       <y>286</y>
       <w>154</w>
       <h>33</h>
@@ -123,7 +123,7 @@ bg=#adadff</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>275</x>
+      <x>264</x>
       <y>88</y>
       <w>231</w>
       <h>33</h>
@@ -139,7 +139,7 @@ fontsize=18
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>209</x>
       <y>154</y>
       <w>198</w>
       <h>99</h>
@@ -151,7 +151,7 @@ m1=s:Strategy</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
+      <x>209</x>
       <y>220</y>
       <w>198</w>
       <h>121</h>
@@ -163,7 +163,7 @@ m1=s:Strategy</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
+      <x>253</x>
       <y>154</y>
       <w>66</w>
       <h>176</h>
@@ -175,7 +175,7 @@ m1=s:Strategy</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>517</x>
+      <x>506</x>
       <y>220</y>
       <w>77</w>
       <h>110</h>
