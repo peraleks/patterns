@@ -3,18 +3,6 @@
  * АДАПТЕР преобразует тнтерфейс класса к другому интерфейсу, на который расчитан клиент. Адаптер
  * обеспечивает работу классов, невозможную в обычных условиях из-за несовместимости интерфейсов.
  */
-class Client
-{
-    private $a = 2;
-
-    private $b = 3;
-
-    public function display(Target $target)
-    {
-        echo 'Result = '.$target->sum($this->a, $this->b);
-    }
-}
-
  // Интерфейс, который использует клиент
 interface Target
 {
@@ -65,6 +53,18 @@ class ClassAdapter extends Adaptee implements Target
     use TargetTrait;
 }
 
+/*********************** Client code ******************************/
+class Client
+{
+    private $a = 2;
+
+    private $b = 3;
+
+    public function display(Target $target)
+    {
+        echo 'Result = '.$target->sum($this->a, $this->b);
+    }
+}
 
 (new Client)->display(new ObjectAdapter);
 echo '<br>';

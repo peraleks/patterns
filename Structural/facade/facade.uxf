@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>70</x>
       <y>160</y>
       <w>540</w>
       <h>280</h>
@@ -16,9 +16,9 @@ drawRectangle(10,10,0,0)</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>100</x>
+      <x>90</x>
       <y>170</y>
-      <w>90</w>
+      <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>Subsystem
@@ -28,7 +28,7 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
+      <x>300</x>
       <y>110</y>
       <w>110</w>
       <h>30</h>
@@ -41,7 +41,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>210</y>
       <w>130</w>
       <h>50</h>
@@ -53,7 +53,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
+      <x>320</x>
       <y>280</y>
       <w>110</w>
       <h>40</h>
@@ -64,7 +64,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
+      <x>140</x>
       <y>320</y>
       <w>130</w>
       <h>50</h>
@@ -76,7 +76,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>460</x>
       <y>200</y>
       <w>130</w>
       <h>50</h>
@@ -88,7 +88,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>460</x>
       <y>350</y>
       <w>130</w>
       <h>50</h>
@@ -100,7 +100,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
+      <x>180</x>
       <y>250</y>
       <w>30</w>
       <h>90</h>
@@ -111,7 +111,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>310</y>
       <w>130</w>
       <h>90</h>
@@ -122,7 +122,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
+      <x>240</x>
       <y>230</y>
       <w>150</w>
       <h>70</h>
@@ -133,7 +133,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
+      <x>520</x>
       <y>240</y>
       <w>30</w>
       <h>130</h>
@@ -144,7 +144,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>200</x>
       <y>360</y>
       <w>340</w>
       <h>80</h>
@@ -155,7 +155,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
+      <x>420</x>
       <y>240</y>
       <w>90</w>
       <h>80</h>
@@ -166,7 +166,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
+      <x>260</x>
       <y>310</y>
       <w>90</w>
       <h>60</h>
@@ -177,7 +177,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
+      <x>240</x>
       <y>210</y>
       <w>240</w>
       <h>30</h>
@@ -188,7 +188,7 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
+      <x>230</x>
       <y>130</y>
       <w>150</w>
       <h>100</h>
@@ -200,7 +200,7 @@ fg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
+      <x>250</x>
       <y>130</y>
       <w>130</w>
       <h>210</h>
@@ -212,7 +212,7 @@ fg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>130</y>
       <w>60</w>
       <h>170</h>
@@ -224,7 +224,7 @@ fg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>130</y>
       <w>150</w>
       <h>240</h>
@@ -236,7 +236,7 @@ fg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>130</y>
       <w>130</w>
       <h>90</h>
@@ -248,9 +248,9 @@ fg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
+      <x>290</x>
       <y>50</y>
-      <w>110</w>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>*Client Class*
@@ -261,7 +261,7 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
+      <x>230</x>
       <y>80</y>
       <w>150</w>
       <h>50</h>
@@ -273,7 +273,7 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>80</y>
       <w>140</w>
       <h>50</h>
@@ -285,7 +285,7 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>70</y>
       <w>30</w>
       <h>60</h>
@@ -299,7 +299,7 @@ fg=red</panel_attributes>
     <coordinates>
       <x>320</x>
       <y>10</y>
-      <w>80</w>
+      <w>90</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>*Facade*
@@ -313,9 +313,9 @@ fontsize=18
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
+      <x>110</x>
       <y>60</y>
-      <w>110</w>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>*Client Class*
@@ -326,9 +326,9 @@ fg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
+      <x>470</x>
       <y>60</y>
-      <w>110</w>
+      <w>130</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>*Client Class*

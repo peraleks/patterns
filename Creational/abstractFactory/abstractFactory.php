@@ -136,6 +136,7 @@ class NoticeText extends Text
     }
 }
 
+/*********************** Client code ******************************/
 class Alert
 {
     static function display(AbstractFactory $factory, string $string)

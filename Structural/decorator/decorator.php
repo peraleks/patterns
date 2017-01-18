@@ -16,12 +16,12 @@
  * если на его объект сохранилась ссылка.
  */
 
-abstract class Component
+abstract class AComponent
 {
     abstract function operation(): string;
 }
 
-class ConcreteComponent extends Component
+class Component extends AComponent
 {
     public function operation(): string
     {
@@ -29,27 +29,16 @@ class ConcreteComponent extends Component
     }
 }
 
-abstract class Decorator extends Component
+class Decorator extends AComponent
 {
     protected $component;
 
-    function __construct(Component $component)
+    protected $color = "blue";
+
+    function __construct(AComponent $component)
     {
         $this->component = $component;
     }
-}
-
-class ConcreteDecoratorColor extends Decorator
-{
-    public function operation(): string
-    {
-        return '<span style="color:red">'.$this->component->operation().'</span>';
-    }
-}
-
-class ConcreteDecoratorBorder extends Decorator
-{
-    protected $color = "blue";
 
     public function operation(): string
     {
@@ -64,14 +53,13 @@ class ConcreteDecoratorBorder extends Decorator
     }
 }
 
-$component = new ConcreteComponent();
+
+$component = new Component();
 echo $component->operation().'<br>';
-$component= new ConcreteDecoratorColor($component);
+$component = new Decorator($component);
 echo $component->operation().'<br>';
-$component = new ConcreteDecoratorBorder($component);
+$component->setColor('red');
 echo $component->operation().'<br>';
-($component = new ConcreteDecoratorBorder($component))->setColor('red');
-echo $component->operation().'<br>';
-$component = new ConcreteDecoratorBorder($component);
+$component = new Decorator($component);
 $component->setColor('yellow');
 echo $component->operation().'<br>';

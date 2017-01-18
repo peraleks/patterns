@@ -98,6 +98,7 @@ class Invoker
     }
 }
 
+/*********************** Client code ******************************/
 class Serializer
 {
     public static function save($obj)

@@ -4,131 +4,130 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>132</x>
-      <y>220</y>
+      <x>319</x>
+      <y>319</y>
       <w>132</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>*Client*
 --
 --
-+ someMethod()
++someMethod()
 fg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>154</x>
-      <y>77</y>
-      <w>99</w>
+      <x>121</x>
+      <y>187</y>
+      <w>110</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>*Target*
 --
 --
-+ request()
++request()
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>341</x>
-      <y>220</y>
-      <w>143</w>
+      <x>297</x>
+      <y>77</y>
+      <w>176</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>*Adaptee*
 --
 --
-+ specificRequest()
++specificRequest()
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>341</x>
-      <y>77</y>
-      <w>143</w>
+      <x>319</x>
+      <y>187</y>
+      <w>132</w>
       <h>55</h>
     </coordinates>
     <panel_attributes>*Adapter*
 --
 --
-+ request()
+^+request()
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>363</x>
+      <x>374</x>
       <y>121</y>
       <w>33</w>
-      <h>121</h>
+      <h>88</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-fg=magenta</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>77</y>
+      <x>220</x>
+      <y>198</y>
       <w>121</w>
       <h>33</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-fg=magenta</panel_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>209</x>
-      <y>121</y>
-      <w>33</w>
-      <h>121</h>
+      <x>374</x>
+      <y>231</y>
+      <w>99</w>
+      <h>110</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.
+    <panel_attributes>lt=&lt;-
+m1=t:Target
 fg=red</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>55</x>
-      <y>154</y>
-      <w>143</w>
+      <x>495</x>
+      <y>341</y>
+      <w>132</w>
       <h>33</h>
     </coordinates>
-    <panel_attributes>Target :: request()
+    <panel_attributes>t-&gt;request()
 bg=#adadff</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>66</x>
-      <y>176</y>
-      <w>99</w>
-      <h>110</h>
+      <x>429</x>
+      <y>352</y>
+      <w>88</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;80.0</additional_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>396</x>
-      <y>154</y>
-      <w>220</w>
+      <x>484</x>
+      <y>209</y>
+      <w>231</w>
       <h>33</h>
     </coordinates>
-    <panel_attributes>Adaptee :: specificRequest()
+    <panel_attributes>this-&gt;specificRequest()
 bg=#adadff</panel_attributes>
     <additional_attributes/>
   </element>
@@ -136,19 +135,19 @@ bg=#adadff</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>407</x>
-      <y>110</y>
-      <w>55</w>
-      <h>66</h>
+      <y>220</y>
+      <w>99</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>lt=..</panel_attributes>
-    <additional_attributes>30.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>198</x>
-      <y>22</y>
-      <w>264</w>
+      <x>242</x>
+      <y>33</y>
+      <w>319</w>
       <h>33</h>
     </coordinates>
     <panel_attributes>*Adapter / Wrapper (class)*

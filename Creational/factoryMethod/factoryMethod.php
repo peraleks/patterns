@@ -10,7 +10,7 @@
  *   с этим предоставить возможность выбора обьект какой реализации инстанцировать.
  */
 
-abstract class Product
+abstract class AProduct
 {
     protected $tagOpen = "<div style='border: 2px solid black;
                         background-color: grey;
@@ -33,9 +33,9 @@ abstract class Product
     }
 }
 
-abstract class Creator
+abstract class ACreator
 {
-    abstract function factoryMethod(int $i): Product;
+    abstract function factoryMethod(int $i): AProduct;
 
     public function createComposition()
     {
@@ -47,34 +47,34 @@ abstract class Creator
     }
 }
 
-class RectangleConcreteCreator extends Creator
+class RectangleCreator extends ACreator
 {
-    public function factoryMethod(int $number): Product
+    public function factoryMethod(int $i): AProduct
     {
-        return new RectangleConcreteProduct($number);
+        return new RectangleProduct($i);
     }
 }
 
-class CircleConcreteCreator extends Creator
+class CircleCreator extends ACreator
 {
-    public function factoryMethod(int $number): Product
+    public function factoryMethod(int $i): AProduct
     {
-        return new CircleConcreteProduct($number);
+        return new CircleProduct($i);
     }
 }
 
-class RectangleConcreteProduct extends Product
+class RectangleProduct extends AProduct
 {
     protected $style = 'padding: 20px 30px;';
 }
 
-class CircleConcreteProduct extends Product
+class CircleProduct extends AProduct
 {
     protected $style = 'padding: 20px 20px; border-radius: 50%;';
 }
 
 
-
-(new RectangleConcreteCreator)->createComposition();
+/*********************** Client code ******************************/
+(new RectangleCreator)->createComposition();
 echo '<br>';
-(new CircleConcreteCreator)->factoryMethod(11)->display();
+(new CircleCreator)->factoryMethod(11)->display();

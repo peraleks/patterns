@@ -101,6 +101,7 @@ class TextHandlerContext
     }
 }
 
+/*********************** Client code ******************************/
 if (isset($_POST['divide'])) {
 
 //выбираем алгоритм разбиения
