@@ -65,5 +65,6 @@ class Template extends ATemplate
     }
 }
 
+/*********************** Client code ******************************/
 $template = new Template();
 $template->algorithm();

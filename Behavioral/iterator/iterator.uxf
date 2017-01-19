@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>52</y>
+      <w>221</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*Aggregate*
+--
+createIterator()
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>533</x>
+      <y>26</y>
+      <w>208</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+*Iterator*
+--
+hasNext()
+next()
+...
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>208</y>
+      <w>221</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>*ConcreteAggregate*
+--
+-collection
+--
++createIterator()
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>533</x>
+      <y>208</y>
+      <w>208</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>*ConcreteIterator*
+--
+-collection
+--
++hasNext()
++next()
++...
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>611</x>
+      <y>130</y>
+      <w>39</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>117</y>
+      <w>39</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>338</x>
+      <y>208</y>
+      <w>221</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instantiate&gt;&gt;</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>351</y>
+      <w>104</w>
+      <h>39</h>
+    </coordinates>
+    <panel_attributes>*Client*
+
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>286</y>
+      <w>182</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=a:Aggregate
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;120.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>481</x>
+      <y>312</y>
+      <w>286</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=i:Iterator
+fg=red</panel_attributes>
+    <additional_attributes>120.0;10.0;120.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>377</y>
+      <w>364</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>return
+new ConcreteIterator(collection)
+bg=#adadff</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>260</y>
+      <w>39</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

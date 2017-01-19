@@ -42,7 +42,9 @@ define('WEB_DIR', __DIR__);
 //              include(__DIR__.'/Behavioral/observer/observer.php');
 //.............................................................................
 // Интерпретатор / Interpreter
-// Итератор ..................... Iterator
+//.............................................................................
+// Итератор / Iterator (Cursor / Курсор)
+                include (__DIR__.'/Behavioral/iterator/iterator.php');
 //.............................................................................
 // Команда / Command (Action / Действие, Transaction / Транзакция)
 //                include(__DIR__.'/Behavioral/command/command.php');
@@ -54,7 +56,7 @@ define('WEB_DIR', __DIR__);
 // Цепочка обязанностей ......... Chaine Of Responsibilities
 //.............................................................................
 // Шаблонный метод / Template Method
-                include (__DIR__.'/Behavioral/templateMethod/templateMethod.php');
+//                include (__DIR__.'/Behavioral/templateMethod/templateMethod.php');
 //.............................................................................
 // Объект Null .................. Null Object
 // Спецификация ................. Specification
